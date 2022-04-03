@@ -101,3 +101,4 @@ const btnClickDelete = () => {
     content.innerHTML = '<p> Litle Garden </p>';
 
 }
+const gitLine = true;
