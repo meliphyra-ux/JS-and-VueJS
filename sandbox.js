@@ -85,20 +85,55 @@
 // para.innerText += ' new text';
 // });
 // console.log(paras)
-const content = document.querySelector('.pale');
-const link = document.querySelector('body > a')
-console.log(link.getAttribute('href'))
-const contact = 'tel:+380992395067';
-link.setAttribute('href',contact)
+// const content = document.querySelector('.pale');
+// const link = document.querySelector('body > a')
+// console.log(link.getAttribute('href'))
+// const contact = 'tel:+380992395067';
+// link.setAttribute('href',contact)
 
 
 
 
-const btnClickAdd = () => {
-    content.innerHTML += ' <h1>This is new text</h2>';
-}
-const btnClickDelete = () => {
-    content.innerHTML = '<p> Litle Garden </p>';
+// const btnClickAdd = () => {
+//     content.innerHTML += ' <h1>This is new text</h2>';
+// }
+// const btnClickDelete = () => {
+//     content.innerHTML = '<p> Litle Garden </p>';
 
-}
-const gitLine = true;
+// }
+// const title = document.querySelector('.title');
+// console.log(title.style);
+// title.style.margin = "50px";
+// title.style.fontSize = "60px"
+// console.log(title.classList);
+// title.classList.add('error');
+// title.classList.remove('title');
+//My function;
+// const finding = document.querySelectorAll('div > p')
+// finding.forEach(paragraph => {
+//     let singleWord = paragraph.textContent.split(' ');
+//     singleWord.forEach(word => {
+//         if(word == 'error')
+//         {
+//             paragraph.classList.add('error');
+//         }
+//         else if(word =='success'){
+//             paragraph.classList.add('success');
+//         }
+//         else;
+//     })
+// })
+//More comlicated code
+const finding = document.querySelectorAll('div > p')
+finding.forEach(p =>{
+    
+    if(p.textContent.includes('error'))
+    {
+      p.classList.add('error');
+    }
+    else if(p.textContent.includes('success'))
+    {
+      p.classList.add('success');
+    }
+    else;
+})
