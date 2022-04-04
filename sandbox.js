@@ -124,20 +124,28 @@
 //     })
 // })
 //More comlicated code
-const finding = document.querySelectorAll('div > p')
-finding.forEach(p =>{
+// const finding = document.querySelectorAll('div > p')
+// finding.forEach(p =>{
     
-    if(p.textContent.includes('error'))
-    {
-      p.classList.add('error');
-    }
-    else if(p.textContent.includes('success'))
-    {
-      p.classList.add('success');
-    }
-    else;
-})
-const title = document.querySelector('p');
-title.classList.toggle('message');
-console.log(title.classList);
-title.classList.toggle('message');
+//     if(p.textContent.includes('error'))
+//     {
+//       p.classList.add('error');
+//     }
+//     else if(p.textContent.includes('success'))
+//     {
+//       p.classList.add('success');
+//     }
+//     else;
+// })
+// const title = document.querySelector('p');
+// title.classList.toggle('message');
+// console.log(title.classList);
+// title.classList.toggle('message');
+//Parent and child methods
+const article = document.querySelector('.pale');
+console.log(article.children)
+Array.from(article.children).forEach(child => {
+  child.classList.add('article-element');
+});
+const title = document.querySelector('h2');
+console.log(title.parentElement);
