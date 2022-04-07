@@ -1,0 +1,36 @@
+const button = document.querySelector('button');
+const ul = document.querySelector('ul');
+const input = document.querySelector('input');
+ul.addEventListener('click', e => {
+    if(e.target.tagName == 'LI')
+    {
+        if(e.target.classList == 'line'){
+            e.target.classList.add('unline');
+            e.target.classList.remove('line');
+        }
+        else{
+            e.target.classList.remove('unline');
+            e.target.classList.add('line');
+        }
+    }
+    e.stopPropagation();
+
+});
+ul.addEventListener('dblclick', e => {
+    if(e.target.tagName == 'LI')
+    {
+        e.target.remove();
+    }
+    e.stopPropagation();
+});
+button.addEventListener('click', () => {
+    if(input.value != ''){
+    const li = document.createElement('li');
+    li.classList.add('line');
+    li.textContent = `${input.value}`;
+    ul.prepend(li);
+    }
+    else{
+        alert('Write something in to-do list')
+    }
+});

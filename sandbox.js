@@ -10,6 +10,7 @@
 // console.log(came);
 // console.log(came.substring(1,3));
 
+
 //Numbers
 // let radius = 10;
 // const pi = 3.14;
@@ -142,10 +143,49 @@
 // console.log(title.classList);
 // title.classList.toggle('message');
 //Parent and child methods
-const article = document.querySelector('.pale');
-console.log(article.children)
-Array.from(article.children).forEach(child => {
-  child.classList.add('article-element');
+// const article = document.querySelector('.pale');
+// console.log(article.children)
+// Array.from(article.children).forEach(child => {
+//   child.classList.add('article-element');
+// });
+// const title = document.querySelector('h2');
+// console.log(title.parentElement);
+// const button = document.querySelectorAll('button');
+// button.addEventListener('click', () => {
+//    console.log('You clicked on me');
+// });
+// const liEvent = (list) => {
+//   list.addEventListener('click', e => {
+//     e.target.remove();
+//   });
+// }
+const ul = document.querySelector('ul');
+const button = document.querySelector('button');
+const input = document.querySelector('input')
+button.addEventListener('click', () => {
+  // ul.innerHTML += `<li>${input.value}</li>`
+  const li = document.createElement('li');
+  li.textContent = `${input.value}`;
+  // ul.append(li);
+  ul.prepend(li);
+  // li.addEventListener('click', e => {
+  //   e.target.remove();
+  // });
+  // liEvent(li);
+
+})
+// const items = document.querySelectorAll('li');
+// items.forEach(item => {
+//   item.addEventListener('click', e => {
+//     e.stopPropagation();
+//     e.target.remove();
+//   });
+// });
+ul.addEventListener('click', e => {
+  if(e.target.tagName === 'LI')
+  {
+  console.log(e);
+  e.target.remove();
+  }
+  e.stopPropagation();
 });
-const title = document.querySelector('h2');
-console.log(title.parentElement);

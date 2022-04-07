@@ -5,6 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .visible {
+            opacity: 1;
+        }
+        .hidden{
+            opacity: 0;
+        }
+        ul > li {
+            display: flex;
+            margin: 5px;
+            width: 300px;
+            height: 50px;
+            color: black;
+            font-weight:  700;
+            background-color: silver;
+            border: 1px solid black;
+            border-radius: 15px;
+            justify-content: center;
+            flex-flow: column wrap;
+            align-items:  center;
+        }
+    </style>
 </head>
 <body>
     <h1>Test</h1>
@@ -13,16 +35,15 @@
     <p>Hello world</p>
     <p class="er">Hello world123</p>
     <a href="https://www.google.com.ua/?hl=ru">Link</a>
-    <div class="pale">
-        <p>Litle error</p>
-        <p>Litle success</p>
-        <p>Litle success</p>
-        <p>Litle error</p>
-        <h2>Garden warrior</h2>
+    <ul>
+        <li>Title</li>
+        <li>Screen</li>
+        <li>Table</li>
+        <li>Box</li>
+    </ul>
+    <input type="text" value=''>
 
-    </div>
-    <button onclick="btnClickAdd()">Add</button>
-    <button onclick="btnClickDelete()">Delete</button>
+    <button>Add new to do</button>
     <p class = 'title'>New Git line</p>
 
 
