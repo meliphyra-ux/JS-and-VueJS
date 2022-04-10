@@ -1,6 +1,10 @@
 const button = document.querySelector('button');
 const ul = document.querySelector('ul');
-const input = document.querySelector('input');
+const input = document.querySelector('div#container>input');
+const img = document.querySelector('img#close');
+const imgOpen = document.querySelector('img#open');
+const range = document.querySelector('#range');
+const controlHeader = document.querySelector('#controlHeader');
 ul.addEventListener('click', e => {
     if(e.target.tagName == 'LI')
     {
@@ -29,8 +33,40 @@ button.addEventListener('click', () => {
     li.classList.add('line');
     li.textContent = `${input.value}`;
     ul.prepend(li);
+    input.value = ''
     }
     else{
         alert('Write something in to-do list')
     }
+});
+img.addEventListener('click', e =>{
+    const aside = document.querySelector('aside');
+   
+    var animation = aside.animate([
+        {left: '0px'},
+        {left: '-400px'}
+    ], 200);
+    animation.addEventListener('finish', () =>{
+        aside.style.left = '-400px';
+    });
+    
+});
+
+imgOpen.addEventListener('click', e =>{
+    const aside = document.querySelector('aside');
+    
+    var animation = aside.animate([
+        {left: '-400px'},
+        {left: '0px'}
+    ], 200);
+    animation.addEventListener('finish', () =>{
+        aside.style.left = '0px';
+    });
+    
+});
+range.addEventListener('change', e => {
+    console.log(range.value)
+    controlHeader.textContent = `Current font size: ${range.value}`;
+    ul.setAttribute('style',`font-size: ${range.value}px`)
+    
 });
