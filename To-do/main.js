@@ -33,7 +33,7 @@ button.addEventListener('click', () => {
     li.classList.add('line');
     li.textContent = `${input.value}`;
     ul.prepend(li);
-    input.value = ''
+    input.value = '';
     }
     else{
         alert('Write something in to-do list')
@@ -68,5 +68,24 @@ range.addEventListener('change', e => {
     console.log(range.value)
     controlHeader.textContent = `Current font size: ${range.value}`;
     ul.setAttribute('style',`font-size: ${range.value}px`)
+    
+});
+const wrapper = document.querySelector('.popup-wrapper');
+const close = document.querySelector('.popup-close');
+const popup = document.querySelector('#contacts');
+const popupbox = document.querySelector('.popup-content');
+
+
+popup.addEventListener('click', e => {
+    wrapper.style.display = 'block';
+});
+
+close.addEventListener('click', e => {
+    wrapper.style.display = 'none';
+    e.stopPropagation();
+    
+});
+wrapper.addEventListener('click', e => {
+    if(e.target == wrapper) wrapper.style.display = 'none';
     
 });

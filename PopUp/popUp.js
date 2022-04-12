@@ -7,9 +7,11 @@ popup.addEventListener('click', () => {
     wrapper.style.display = 'block';
 });
 
-close.addEventListener('click', () => {
+close.addEventListener('click', e => {
     wrapper.style.display = 'none';
+    e.stopPropagation();
 });
-wrapper.addEventListener('click', () => {
+wrapper.addEventListener('click', e => {
     wrapper.style.display = 'none';
+    e.stopPropagation();
 });
